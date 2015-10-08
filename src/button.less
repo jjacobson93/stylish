@@ -1,0 +1,73 @@
+.button-variant(@bg; @bgHover) {
+	background-color: @bg;
+	&:hover, &:active, &:focus, &.active {
+		background-color: @bgHover;
+		outline: 0;
+	}
+}
+
+.button {
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 500;
+	line-height: 14px;
+	margin: 0 4px 0 0;
+	padding: 12px 22px;
+	-webkit-transition: opacity .3s ease,background-color .3s ease,color .3s ease,box-shadow .3s ease,background .3s ease;
+    transition: opacity .3s ease,background-color .3s ease,color .3s ease,box-shadow .3s ease,background .3s ease;
+    -webkit-appearance: none !important;
+
+	&.red {
+		.button-variant(@red; darken(@red, 3%));
+	}
+
+	&.orange {
+		.button-variant(@orange; darken(@orange, 3%));
+	}
+
+	&.yellow {
+		.button-variant(@yellow; darken(@yellow, 3%));
+	}
+
+	&.olive {
+		.button-variant(@olive; darken(@olive, 3%));
+	}
+
+	&.green {
+		.button-variant(@green; darken(@green, 3%));
+	}
+
+	&.teal {
+		.button-variant(@teal; darken(@teal, 3%));
+	}
+
+	&.blue {
+		.button-variant(@blue; darken(@blue, 3%));
+	}
+
+	&.violet {
+		.button-variant(@violet; darken(@violet, 3%));
+	}
+
+	&.purple {
+		.button-variant(@purple; darken(@purple, 3%));
+	}
+
+	&.pink {
+		.button-variant(@pink; darken(@pink, 3%));
+	}
+
+	&.brown {
+		.button-variant(@brown; darken(@brown, 3%));
+	}
+
+	&.grey {
+		.button-variant(@grey; lighten(@grey, 3%));
+	}
+
+	&.black {
+		.button-variant(@black, lighten(@black, 3%));
+	}
+}
