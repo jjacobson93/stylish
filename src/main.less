@@ -1,17 +1,50 @@
+@import "font-awesome/less/font-awesome.less";
 @import "variables";
+@import "grid";
 @import "button";
+@import "collections";
+@import "navigation";
+@import "form";
+@import "label";
+@import "alert";
+@import "progress";
+@import "sidebar";
+@import "typography";
 
-* {
-	font-size: 14px;
-	font-family: 'Montserrat', 'Avenir Next', 'Lato', 'Helvetica Neue';
-	font-weight: 400;
+*, :after, :before {
+    box-sizing: inherit;
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box;
+	color: @black;
+	height: 100%;
+	font-size: 14px;
+	font-weight: 300;
+	font-family: 'Montserrat', 'Avenir Next', 'Lato', 'Helvetica Neue';
 }
 
-.container {
-	padding: 20px 40px;
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4285em
+}
+
+.right {
+	float: right !important;
+}
+
+.left {
+	float: left !important;
+}
+
+.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }

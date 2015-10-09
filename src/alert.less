@@ -1,0 +1,64 @@
+.alert-variant(@borderColor; @bg; @color) {
+	border-left: 3px solid @borderColor;
+	background-color: @bg;
+	color: @color;
+}
+
+.alert {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.125);
+	padding: 1.2rem .78571429em;
+	margin-bottom: 1.5rem;
+
+	 // colors
+	&.red {
+		.alert-variant(@red; lighten(@red, 28%); darken(@red, 10%));
+	}
+
+	&.orange {
+		.alert-variant(@orange; lighten(@orange, 28%); darken(@orange, 10%));
+	}
+
+	&.yellow {
+		.alert-variant(@yellow; lighten(@yellow, 20%); darken(@yellow, 25%));
+	}
+
+	&.olive {
+		.alert-variant(@olive; lighten(@olive, 28%); darken(@olive, 10%));
+	}
+
+	&.green {
+		.alert-variant(@green; lighten(@green, 28%); darken(@green, 10%));
+	}
+
+	&.teal {
+		.alert-variant(@teal; lighten(@teal, 8%); darken(@teal, 10%));
+	}
+
+	&.blue, &.primary {
+		.alert-variant(@blue; lighten(@blue, 28%); darken(@blue, 10%));
+	}
+
+	&.violet {
+		.alert-variant(@violet; lighten(@violet, 28%); darken(@violet, 10%));
+	}
+
+	&.purple {
+		.alert-variant(@purple; lighten(@purple, 28%); darken(@purple, 10%));
+	}
+
+	&.pink {
+		.alert-variant(@pink; lighten(@pink, 28%); darken(@pink, 10%));
+	}
+
+	&.brown {
+		.alert-variant(@brown; lighten(@brown, 28%); darken(@brown, 10%));
+	}
+
+	&.grey {
+		.alert-variant(@grey; lighten(@grey, 18%); @black);
+	}
+
+	&.black {
+		.alert-variant(darken(@black, 5%); lighten(@black, 8%); #fff);
+	}
+}

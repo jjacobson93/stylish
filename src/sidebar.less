@@ -1,0 +1,82 @@
+.sidebar {
+	background-color: @black;
+	color: lighten(@black, 75%);
+	overflow: scroll;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 250px;
+
+	@media only screen and (max-width: 767px) {
+		width: 100%;
+	}
+
+	@media only screen and (max-width: 990px) and (min-width: 768px) {
+	 	width: 200px;
+	}
+
+	@media only screen and (max-width: 1199px) and (min-width: 992px) {
+		width: 225px;
+	}
+
+	&.menu {
+		.item {
+			float: none;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 1px solid darken(@black, 4%);
+
+			& > a {
+				color: lighten(@black, 40%);
+			}
+
+			&:hover, &:active, &.active {
+				& > a {
+					color: lighten(@black, 75%);
+					background-color: darken(@black, 8%);
+				}
+			}
+		}
+	}
+}
+
+.main {
+	padding-left: 0;
+
+	.container {
+		&.fluid {
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 990px) and (min-width: 768px) {
+	 	padding-left: 200px;
+	 	
+	 	.container {
+	 		width: 623px;
+		 	margin-left: auto!important;
+			margin-right: auto!important;
+	 	}
+	}
+
+	@media only screen and (max-width: 1199px) and (min-width: 992px) {
+		padding-left: 225px;
+		
+		.container {
+			width: 820px;
+			margin-left: auto!important;
+			margin-right: auto!important;
+		}
+	}
+
+	@media only screen and (min-width: 1200px) {
+		padding-left: 250px;
+		
+		.container {
+			width: 924px;
+			margin-left: auto!important;
+			margin-right: auto!important;
+		}
+	}
+}

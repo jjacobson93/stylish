@@ -1,0 +1,111 @@
+.label-variant(@bg) {
+	background-color: @bg;
+}
+
+.label {
+	background-color: @grey;
+	border-radius: .28571429rem;
+	color: #fff;
+	display: inline-block;
+	line-height: 1;
+	vertical-align: baseline;
+	margin: 0 .14285714em;
+	padding: .5833em .833em;
+
+
+    // colors
+	&.red {
+		.label-variant(@red);
+	}
+
+	&.orange {
+		.label-variant(@orange);
+	}
+
+	&.yellow {
+		.label-variant(@yellow);
+	}
+
+	&.olive {
+		.label-variant(@olive);
+	}
+
+	&.green {
+		.label-variant(@green);
+	}
+
+	&.teal {
+		.label-variant(@teal);
+	}
+
+	&.blue, &.primary {
+		.label-variant(@blue);
+	}
+
+	&.violet {
+		.label-variant(@violet);
+	}
+
+	&.purple {
+		.label-variant(@purple);
+	}
+
+	&.pink {
+		.label-variant(@pink);
+	}
+
+	&.brown {
+		.label-variant(@brown);
+	}
+
+	&.grey {
+		.label-variant(@grey);
+	}
+
+	&.black {
+		.label-variant(@black);
+	}
+
+	// sizes
+	&.mini {
+		font-size: .71428571rem;
+	}
+
+	&.tiny {
+		font-size: .85714286rem;
+	}
+
+	&.small {
+		font-size: .92857143rem;
+	}
+
+	&.medium {
+		font-size: 1rem;
+	}
+
+	&.large {
+		font-size: 1.14285714rem;
+	}
+
+	&.big {
+		font-size: 1.28571429rem;
+	}
+
+	&.huge {
+		font-size: 1.42857143rem;
+	}
+
+	&.massive {
+		font-size: 1.71428571rem;
+	}
+
+	// variants
+	&.circular {
+		border-radius: 500rem;
+		min-width: 2em;
+		min-height: 2em;
+		text-align: center;
+		padding: .5em!important;
+		line-height: 1em;
+	}
+}

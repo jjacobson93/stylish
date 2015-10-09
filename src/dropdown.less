@@ -1,0 +1,29 @@
+.dropdown {
+	&.selection {
+		background-color: #fff;
+		cursor: pointer;
+		line-height: 1em;
+		min-height: 2.7142em;
+		outline: 0;
+		white-space: normal;
+		word-wrap: break-word;
+
+		.menu {
+			& > .item {
+				border-top: 1px solid @grey;
+				padding: .71428571rem 1.14285714rem!important;
+				white-space: normal;
+				word-wrap: normal;
+			}
+		}
+	}
+
+	.menu {
+		& > .item {
+			border: none;
+			cursor: pointer;
+			display: block;
+			position: relative;
+		}
+	}
+}

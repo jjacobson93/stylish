@@ -1,0 +1,74 @@
+.checkbox {
+	position: relative;
+	display: inline-block;
+	outline: 0;
+	vertical-align: baseline;
+	line-height: 17px;
+
+	input[type=checkbox],
+	input[type=radio] {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0!important;
+		z-index: -1;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		outline: 0;
+		font-size: 1em;
+
+		-webkit-transition: background-color 0.15s ease-out;
+		transition: background-color 0.15s ease-out;
+
+		&:after {
+			-webkit-transition: left 0.15s ease-out;
+			transition: left 0.15s ease-out;
+		}
+	}
+
+	input + label {
+		cursor: pointer;
+	}
+
+	&.slider {
+		label {
+			border-radius: 3rem;
+			height: 1.8rem;
+			width: 3.5rem;
+			margin-top: 0.3rem;
+			background-color: @grey;
+
+			&:after {
+				background-color: #fff;
+				border-radius: 10rem;
+				content: '';
+				position: absolute;
+				width: 1.5rem;
+				height: 1.5rem;
+				top: 0.15rem;
+				left: 0.15rem;
+			}
+		}
+
+		input {
+			width: 3.5rem;
+			height: 1.95rem;
+
+			&:checked + label {
+				background-color: @blue;
+
+				&:after {
+					left: 1.85rem;
+				}
+			}
+		}
+	}
+
+	&.fitted {
+		width: 3.5rem;
+	}
+}

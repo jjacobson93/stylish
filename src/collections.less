@@ -1,0 +1,143 @@
+// table
+.table {
+	width: 100%;
+	background: #fff;
+	margin: 1em 0;
+	border: 1px solid @tableBorderColor;
+    box-shadow: none;
+    border-radius: .28571429rem;
+    font-size: 1em;
+    font-weight: inherit;
+    text-align: left;
+    color: rgba(0,0,0,.87);
+    border-collapse: separate;
+    border-spacing: 0;
+
+	thead {
+		th {
+			background-color: @tableHeaderBg;
+			border-bottom: 1px solid @tableHeaderBorderColor;
+			font-weight: 500;
+			padding: .92857143em .71428571em;
+		}
+
+		tr {
+			&:first-child {
+				th {
+					&:first-child {
+						border-left: none;
+						border-radius: .28571429rem 0 0;
+					}
+
+					&:last-child {
+						border-radius: 0 .28571429rem 0 0;
+					}
+				}
+			}
+
+			th {
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+
+	tfoot {
+		th {
+			border-top: 1px solid @tableHeaderBorderColor;
+			background-color: @tableHeaderBg;
+			padding: .71428571em;
+		}
+
+		tr {
+			&:first-child {
+				th:only-child {
+				    border-radius: 0 0 .28571429rem .28571429rem;
+				}
+			}
+		}
+	}
+
+	tr {
+		td {
+			border-left: 1px solid @tableInnerBorderColor;
+			border-top: 1px solid @tableInnerBorderColor;
+			padding: .71428571em;
+
+			&:first-child {
+				border-left: none;
+			}
+
+			&.collapsing {
+				width: 1px;
+			}
+		}
+
+		&:first-child {
+			td {
+				border-top: none;
+			}
+		}
+	}
+
+	&.celled {
+		tr {
+			th {
+				border-left: 1px solid @tableHeaderBorderColor;
+
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+
+	&.definition {
+		thead {
+			th {
+				&:first-child {
+					background: 0 0;
+					box-shadow: -1px -1px 0 1px #fff;
+				}
+
+				&:nth-child(2) {
+					border-left: 1px solid @tableHeaderBorderColor;
+				}
+			}
+		}
+	}
+}
+
+td, th {
+	padding: 0;
+}
+
+// attached
+.attached {
+	& + .attached {
+		&.segment:not(.top) {
+			border-top: none;
+		}
+
+		&.segment:not(.bottom) {
+			border-bottom: none;
+		}
+	}
+
+	&.segment {
+		top: 0;
+		bottom: 0;
+		border-radius: 0;
+		width: 100%;
+		max-width: 100%;
+		box-shadow: none;
+		border: 1px solid @grey;
+	}
+}
+
+.segment {
+	position: relative;
+	background-color: #fff;
+	padding: 1em;
+}
