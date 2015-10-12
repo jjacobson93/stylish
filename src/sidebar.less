@@ -27,8 +27,33 @@
 			border-right: 0;
 			border-bottom: 1px solid darken(@black, 4%);
 
+			.menu {
+				.item, li {
+					border: 0;
+
+					& > a {
+						padding: .8em 1.034em;
+						font-size: .95714286em;
+					}
+				}
+			}
+
+			& > .header {
+				margin: 0 0 .6em;
+				padding: 1.15em 1em 0 1em;
+				font-size: 1em;
+			}
+
 			& > a {
 				color: lighten(@black, 40%);
+				display: block;
+				line-height: 1;
+				padding: 1.5em 1em;
+				text-decoration: none;
+				vertical-align: middle;
+				-webkit-transition: opacity .3s ease,background-color .3s ease,color .3s ease,box-shadow .3s ease,background .3s ease;
+				transition: opacity .3s ease,background-color .3s ease,color .3s ease,box-shadow .3s ease,background .3s ease;
+				z-index: 5;
 			}
 
 			&:hover, &:active, &.active {

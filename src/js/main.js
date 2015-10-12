@@ -1,9 +1,12 @@
-var select = require('./select');
+var $ = window.$ = window.jQuery = require('jquery');
+$.fn.transition = require('semantic-ui-transition');
+$.fn.dropdown = require('semantic-ui-dropdown');
 
-document.on('ready', function() {
-	var selectElements = document.getElementsByTagName('select');
-	for (var i = 0; i < selectElements.length; i++) {
-		var el = selectElements[i];
-		select(el);
-	}
+$.fn.dropdown.settings.selector.dropdown = '.dropdown';
+$.fn.dropdown.settings.className.dropdown = 'dropdown';
+$.fn.dropdown.settings.className.label = 'label';
+
+$(function() {
+	$('select').dropdown();
+	$('.selection').dropdown();
 });
