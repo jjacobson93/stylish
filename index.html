@@ -151,104 +151,97 @@
 			</div>
 
 			<h1 class="dividing">Tables</h1>
-			<div class="row">
-				
-				<div class="col-md-6">
-					<table class="table celled">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Ship</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Jonathan</td>
-								<td>Archer</td>
-								<td>NX-01</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>James</td>
-								<td>Kirk</td>
-								<td>NCC-1701, NCC-1701 A</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Jean-Luc</td>
-								<td>Picard</td>
-								<td>NCC-1701 D, NCC-1701 E</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th colspan="4">
-									<button class="button blue right">Next</button>
-								</th>
-							</tr>
-						</tfoot>
-					</table>
-				</div>
-				<div class="col-md-6">
-					<table class="table definition">
-						<thead>
-							<tr>
-								<th></th>
-								<th>Name</th>
-								<th>Registration Date</th>
-								<th>E-mail address</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="collapsing">
-									<div class="checkbox slider">
-										<input type="checkbox" tabindex="0" id="slider1"> <label for="slider1"></label>
-									</div>
-								</td>
-								<td>Adam Appleson</td>
-								<td>January 21, 2015</td>
-								<td>appleson@test.com</td>
-							</tr>
-							<tr>
-								<td class="collapsing">
-									<div class="checkbox slider">
-										<input type="checkbox" tabindex="0" id="slider2"> <label for="slider2"></label>
-									</div>
-								</td>
-								<td>Oliver Hansen</td>
-								<td>February 28, 2015</td>
-								<td>hansen@test.com</td>
-							</tr>
-							<tr>
-								<td class="collapsing">
-									<div class="checkbox slider">
-										<input type="checkbox" tabindex="0" id="slider3"> <label for="slider3"></label>
-									</div>
-								</td>
-								<td>Walter Norman</td>
-								<td>September 20, 2015</td>
-								<td>normar@test.com</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th></th>
-								<th colspan="3">
-									<div class="button blue small labeled right">
-										<span class="fa fa-user icon"></span> Add User
-									</div>
-									<div class="button small">Approve</div>
-									<div class="button small disabled">Approve All</div>
-								</th>
-							</tr>
-						</tfoot>
-					</table>
-				</div>
-			</div>
+			<table class="table celled">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Ship</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Jonathan</td>
+						<td>Archer</td>
+						<td>NX-01</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>James</td>
+						<td>Kirk</td>
+						<td>NCC-1701, NCC-1701 A</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Jean-Luc</td>
+						<td>Picard</td>
+						<td>NCC-1701 D, NCC-1701 E</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="4">
+							<button class="button blue right">Next</button>
+						</th>
+					</tr>
+				</tfoot>
+			</table>
+			<table class="table definition">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Name</th>
+						<th>Registration Date</th>
+						<th>E-mail address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="collapsing">
+							<div class="checkbox slider fitted">
+								<input type="checkbox" tabindex="0" id="slider1"> <label for="slider1"></label>
+							</div>
+						</td>
+						<td>Adam Appleson</td>
+						<td>January 21, 2015</td>
+						<td>appleson@test.com</td>
+					</tr>
+					<tr>
+						<td class="collapsing">
+							<div class="checkbox slider fitted">
+								<input type="checkbox" tabindex="0" id="slider2"> <label for="slider2"></label>
+							</div>
+						</td>
+						<td>Oliver Hansen</td>
+						<td>February 28, 2015</td>
+						<td>hansen@test.com</td>
+					</tr>
+					<tr>
+						<td class="collapsing">
+							<div class="checkbox slider fitted">
+								<input type="checkbox" tabindex="0" id="slider3"> <label for="slider3"></label>
+							</div>
+						</td>
+						<td>Walter Norman</td>
+						<td>September 20, 2015</td>
+						<td>normar@test.com</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th></th>
+						<th colspan="3">
+							<div class="button blue small labeled right">
+								<span class="fa fa-user icon"></span> Add User
+							</div>
+							<div class="button small">Approve</div>
+							<div class="button small disabled">Approve All</div>
+						</th>
+					</tr>
+				</tfoot>
+			</table>
 
 			
 			<h1 class="dividing">Labels</h1>
@@ -290,28 +283,28 @@
 				<h4 class="dividing header">Shipping Information</h4>
 				<div class="field">
 					<label>Name</label>
-					<div class="two fields">
-						<div class="field">
+					<div class="row fields">
+						<div class="col-sm-6 field">
 							<input type="text" name="shipping[first-name]" placeholder="First Name">
 						</div>
-						<div class="field">
+						<div class="col-sm-6 field">
 							<input type="text" name="shipping[last-name]" placeholder="Last Name">
 						</div>
 					</div>
 				</div>
 				<div class="field">
 					<label>Billing Address</label>
-					<div class="fields">
-						<div class="twelve wide field">
+					<div class="row fields">
+						<div class="col-sm-9 wide field">
 							<input type="text" name="shipping[address]" placeholder="Street Address">
 						</div>
-						<div class="four wide field">
+						<div class="col-sm-3 wide field">
 							<input type="text" name="shipping[address-2]" placeholder="Apt #">
 						</div>
 					</div>
 				</div>
-				<div class="two fields">
-					<div class="field">
+				<div class="row">
+					<div class="col-sm-6 field">
 						<label>State</label>
 						<select class="fluid dropdown">
 							<option value="">State</option>
@@ -368,7 +361,7 @@
 							<option value="WY">Wyoming</option>
 						</select>
 					</div>
-					<div class="field">
+					<div class="col-sm-6 field">
 						<label>Country</label>
 						<div class="fluid search selection dropdown">
 							<input type="hidden" name="country" value="al">
@@ -644,19 +637,19 @@
 						</div>
 					</div>
 				</div>
-				<div class="fields">
-					<div class="seven wide field">
+				<div class="row fields">
+					<div class="col-sm-5 wide field">
 						<label>Card Number</label>
 						<input type="text" name="card[number]" maxlength="16" placeholder="Card #">
 					</div>
-					<div class="three wide field">
+					<div class="col-sm-3 wide field">
 						<label>CVC</label>
 						<input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
 					</div>
-					<div class="six wide field">
+					<div class="col-sm-4 wide field">
 						<label>Expiration</label>
-						<div class="two fields">
-							<div class="field">
+						<div class="row fields">
+							<div class="col-sm-6 field">
 								<select class="fluid search dropdown" name="card[expire-month]">
 									<option value="">Month</option>
 									<option value="1">January</option>
@@ -673,7 +666,7 @@
 									<option value="12">December</option>
 								</select>
 							</div>
-							<div class="field">
+							<div class="col-sm-6 field">
 								<input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
 							</div>
 						</div>
@@ -710,9 +703,9 @@
 				</div>
 				 <div class="segment">
 					<div class="field">
-						<div class="toggle checkbox">
-							<input type="checkbox" name="gift" tabindex="0" class="hidden">
-							<label>Do not include a receipt in the package</label>
+						<div class="checkbox toggle">
+							<input type="checkbox" id="gift" name="gift" tabindex="0">
+							<label for="gift">Do not include a receipt in the package</label>
 						</div>
 					</div>
 				</div>
@@ -720,59 +713,61 @@
 			</form>
 
 			<h1 class="dividing">Dropdown menus</h1>
-			<div class="dropdown theme-dropdown clearfix">
-				<a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<li class="active"><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
+			<div class="dropdown" id="dropdown1">
+				<button class="button">Dropdown <span class="fa fa-caret-down"></span></button>
+				<div class="menu">
+					<div class="item active"><a href="#">Action</a></div>
+					<div class="item"><a href="#">Another action</a></div>
+					<div class="item"><a href="#">Something else here</a></div>
+					<div class="item divider"></div>
+					<div class="item"><a href="#">Separated link</a></div>
+				</div>
 			</div>
 
 
 			
 			<h1 class="dividing">Navs</h1>
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#">Home</a></li>
-				<li role="presentation"><a href="#">Profile</a></li>
-				<li role="presentation"><a href="#">Messages</a></li>
-			</ul>
-			<ul class="nav nav-pills" role="tablist">
-				<li role="presentation" class="active"><a href="#">Home</a></li>
-				<li role="presentation"><a href="#">Profile</a></li>
-				<li role="presentation"><a href="#">Messages</a></li>
-			</ul>
+			<div class="menu tabs" role="tablist">
+				<div class="item active"><a href="#">Home</a></div>
+				<div class="item"><a href="#">Profile</a></div>
+				<div class="item"><a href="#">Messages</a></div>
+			</div>
+			<div class="menu pills" role="tablist">
+				<div class="item active"><a href="#">Home</a></div>
+				<div class="item"><a href="#">Profile</a></div>
+				<div class="item"><a href="#">Messages</a></div>
+			</div>
 
 
 			
 			<h1 class="dividing">Navbars</h1>
 
 			<nav class="navbar">
-				<div class="container">
+				<div class="container full">
 					<ul class="menu">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<!-- <li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li> -->
+						<li>
+							<div class="dropdown" id="nav-dropdown">
+								<div class="text">Dropdown <span class="fa fa-caret-down"></span></div>
+								<div class="menu">
+									<div class="item"><a href="#">Action</a></div>
+									<div class="item"><a href="#">Another action</a></div>
+									<div class="item"><a href="#">Something else here</a></div>
+									<div class="item divider" role="separator"></div>
+									<div class="item header">Nav header</div>
+									<div class="item"><a href="#">Separated link</a></div>
+									<div class="item"><a href="#">One more separated link</a></div>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</nav>
 
 			<nav class="navbar inverse">
-				<div class="container">
+				<div class="container full">
 					<ul class="menu">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#about">About</a></li>
@@ -862,59 +857,83 @@
 			<h1 class="dividing">Cards</h1>
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
+					<div class="card card-default">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
 						</div>
-						<div class="panel-body">
-							Panel content
-						</div>
-					</div>
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
-						</div>
-						<div class="panel-body">
-							Panel content
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
 						</div>
 					</div>
-				</div><!-- /.col-sm-4 -->
+					<div class="card primary">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
+						</div>
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="col-sm-4">
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
+					<div class="card success">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
 						</div>
-						<div class="panel-body">
-							Panel content
-						</div>
-					</div>
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
-						</div>
-						<div class="panel-body">
-							Panel content
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
 						</div>
 					</div>
-				</div><!-- /.col-sm-4 -->
+					<div class="card info">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
+						</div>
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="col-sm-4">
-					<div class="panel panel-warning">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
+					<div class="card warning">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
 						</div>
-						<div class="panel-body">
-							Panel content
-						</div>
-					</div>
-					<div class="panel panel-danger">
-						<div class="panel-heading">
-							<h3 class="panel-title">Panel title</h3>
-						</div>
-						<div class="panel-body">
-							Panel content
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
 						</div>
 					</div>
-				</div><!-- /.col-sm-4 -->
+					<div class="card danger">
+						<div class="content">
+							<div class="header">Card header</div>
+							<div class="body">Card content</div>
+						</div>
+						<div class="footer">
+							<div class="buttons full">
+								<a href="#" class="button red">Deny</a>
+								<a class="button green">Approve</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

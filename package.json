@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jjacobson93/stylish#readme",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "browserify": "^11.2.0",
     "del": "^2.0.2",
     "font-awesome": "^4.4.0",
@@ -35,6 +36,7 @@
     "jquery": "^2.1.4",
     "path": "^0.12.7",
     "semantic-ui-dropdown": "^2.1.4",
+    "semantic-ui-grid": "^2.1.4",
     "semantic-ui-transition": "^2.1.4",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

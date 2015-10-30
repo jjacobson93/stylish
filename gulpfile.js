@@ -57,16 +57,25 @@ function scripts() {
 		.pipe(gulp.dest(paths.output));
 }
 
-gulp.task('clean', function() {
+gulp.task('clean-styles', function() {
 	return del([
 		paths.output + '/styles.min.css',
 		paths.output + '/styles.min.css.gz',
+		paths.output + '/styles.min.css.map'
+	]);
+})
+
+gulp.task('clean-scripts', function() {
+	return del([
 		paths.output + '/scripts.min.js',
-		paths.output + '/scripts.min.js.gz'
+		paths.output + '/scripts.min.js.gz',
+		paths.output + '/scripts.min.js.map'
 	]);
 });
 
-gulp.task('styles', ['clean'], function() {
+gulp.task('clean', ['clean-styles', 'clean-scripts']);
+
+gulp.task('styles', ['clean-styles'], function() {
 	var lessFilter = filter('*.less', { restore: true });
 
 	return gulp.src(paths.styles)
@@ -83,7 +92,7 @@ gulp.task('styles', ['clean'], function() {
 		.pipe(gulp.dest(paths.output));
 });
 
-gulp.task('scripts', ['clean'], scripts);
+gulp.task('scripts', ['clean-scripts'], scripts);
 
 gulp.task('compress-styles', ['styles'], function() {
 	return gulp.src(['dist/styles.min.css'])
@@ -98,7 +107,7 @@ gulp.task('compress-scripts', ['scripts'], function() {
 });
 
 gulp.task('watch', ['build'], function() {
-	return gulp.watch(['src/**/*'], ['build']);
+	return gulp.watch(['src/**/*.less'], ['build-styles']);
 });
 
 gulp.task('serve', ['build'], serve({ port: SERVE_PORT }));

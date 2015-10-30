@@ -9,4 +9,6 @@ $.fn.dropdown.settings.className.label = 'label';
 $(function() {
 	$('select').dropdown();
 	$('.selection').dropdown();
+	$('#dropdown1').dropdown();
+	$('#nav-dropdown').dropdown();
 });

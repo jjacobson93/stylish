@@ -1,6 +1,9 @@
 @import "font-awesome/less/font-awesome.less";
 @import (inline) "semantic-ui-transition/transition.css";
 @import "variables";
+@import "bootstrap/less/mixins/grid-framework";
+@import "bootstrap/less/mixins/grid";
+@import "bootstrap/less/grid";
 @import "grid";
 @import "button";
 @import "collections";
@@ -12,6 +15,7 @@
 @import "sidebar";
 @import "dropdown";
 @import "typography";
+@import "card";
 
 *, :after, :before {
     box-sizing: inherit;
@@ -30,6 +34,25 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.4285em
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.container, .row, .menu, .field {
+	&:before {
+		display: table;
+		content: ' ';
+	}
+
+	&:after {
+		display: table;
+		content: ' ';
+		clear: both;
+	}
 }
 
 .right {
